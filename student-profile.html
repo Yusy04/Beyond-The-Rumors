@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - Beyond the Rumors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .profile-hero {
+            background: var(--gradient-primary);
+            padding: 120px 20px 60px;
+            color: var(--qatar-white);
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--qatar-white);
+            margin: 0 auto 2rem;
+            border: 6px solid var(--qatar-white);
+            box-shadow: var(--shadow-strong);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--qatar-maroon);
+            font-weight: 700;
+        }
+
+        .profile-info {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-meta {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .profile-contact {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .contact-item a {
+            color: var(--qatar-white);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+
+        .profile-content {
+            padding: 60px 20px;
+            background: var(--qatar-cream);
+        }
+
+        .profile-section {
+            background: var(--qatar-white);
+            padding: 3rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .profile-section h2 {
+            color: var(--qatar-maroon);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--qatar-maroon);
+        }
+
+        .profile-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .profile-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .profile-section li {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background: var(--qatar-cream);
+            border-radius: 10px;
+            border-left: 4px solid var(--qatar-maroon);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.75rem 2rem;
+            background: var(--qatar-maroon);
+            color: var(--qatar-white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: var(--qatar-maroon-dark);
+            transform: translateX(-5px);
+        }
+
+        .highlight-box {
+            background: var(--gradient-primary);
+            color: var(--qatar-white);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            color: var(--qatar-white);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h1>Beyond the Rumors</h1>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#stories">Stories</a></li>
+                <li><a href="index.html#topics">Topics</a></li>
+                <li><a href="index.html#students">Students</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Hero -->
+    <section class="profile-hero">
+        <div class="container">
+            <div class="profile-info">
+                <div class="profile-avatar" id="profileAvatar">SN</div>
+                <h1 class="profile-name" id="profileName">Student Name</h1>
+                <p class="profile-meta" id="profileMeta">
+                    <span id="profileUniversity">CMU-Q</span> • 
+                    <span id="profileOrigin">From: [Country]</span> • 
+                    <span id="profileLanguages">Languages: [Languages]</span>
+                </p>
+                <div class="profile-contact">
+                    <h3 style="margin-bottom: 1rem;">Contact Information</h3>
+                    <div class="contact-item">
+                        <strong>Phone:</strong>
+                        <a href="tel:" id="profilePhone">+974 XXXX XXXX</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong>
+                        <a href="mailto:" id="profileEmail">student@example.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Content -->
+    <section class="profile-content">
+        <div class="container">
+            <a href="index.html#students" class="back-button">← Back to Students</a>
+
+            <!-- Demographics -->
+            <div class="profile-section">
+                <h2>About</h2>
+                <div id="demographicsContent">
+                    <p><strong>Name:</strong> <span id="studentName">Student Name</span></p>
+                    <p><strong>Current Location:</strong> <span id="currentLocation">Qatar</span></p>
+                    <p><strong>Original Home:</strong> <span id="originalHome">[Country]</span></p>
+                    <p><strong>Languages Spoken:</strong> <span id="languagesSpoken">English, Arabic, [Others]</span></p>
+                    <p><strong>Religion:</strong> <span id="religion">[Religion or "Prefer not to answer"]</span></p>
+                </div>
+            </div>
+
+            <!-- Prior Knowledge -->
+            <div class="profile-section">
+                <h2>Prior Knowledge & Expectations</h2>
+                <div id="priorKnowledgeContent">
+                    <p>Before coming to Education City, the student's understanding of Qatar and the opportunities available was...</p>
+                    <ul>
+                        <li id="knowledgeOpportunities">Knowledge about opportunities: [Response]</li>
+                        <li id="knowledgeEC">Awareness of Education City: [Response]</li>
+                        <li id="knowledgeDiploma">Understanding of diploma equivalence: [Response]</li>
+                        <li id="knowledgeSharia">Opinion about Sharia law countries: [Response]</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Infrastructure -->
+            <div class="profile-section">
+                <h2>Infrastructure</h2>
+                <div id="infrastructureContent">
+                    <p>The student's experience with Education City's infrastructure and facilities...</p>
+                    <div class="highlight-box">
+                        <p id="infrastructureHighlight">"[Key quote about infrastructure experience]"</p>
+                    </div>
+                    <p id="infrastructureDetails">[Detailed response about infrastructure, facilities, transportation, and how the physical environment shapes identity]</p>
+                </div>
+            </div>
+
+            <!-- Culture -->
+            <div class="profile-section">
+                <h2>Culture</h2>
+                <div id="cultureContent">
+                    <p>The student's perspective on cultural integration and identity negotiation...</p>
+                    <div class="highlight-box">
+                        <p id="cultureHighlight">"[Key quote about cultural experience]"</p>
+                    </div>
+                    <p id="cultureDetails">[Detailed response about cultural adaptation, dress codes, social interactions, and the balance between local and global identities]</p>
+                </div>
+            </div>
+
+            <!-- Language -->
+            <div class="profile-section">
+                <h2>Language & Translanguaging</h2>
+                <div id="languageContent">
+                    <p>How the student navigates multiple languages in different contexts...</p>
+                    <div class="highlight-box">
+                        <p id="languageHighlight">"[Key quote about language and translanguaging]"</p>
+                    </div>
+                    <p id="languageDetails">[Detailed response about language switching, code-mixing, and how language choices reflect identity work]</p>
+                </div>
+            </div>
+
+            <!-- Opinions about Religion -->
+            <div class="profile-section">
+                <h2>Opinions about Religion</h2>
+                <div id="religionContent">
+                    <p>The student's experience with religious expression and accommodation...</p>
+                    <div class="highlight-box">
+                        <p id="religionHighlight">"[Key quote about religious experience]"</p>
+                    </div>
+                    <p id="religionDetails">[Detailed response about religious practices, accommodation, and how religious identity is expressed in Education City]</p>
+                </div>
+            </div>
+
+            <!-- Identity Development -->
+            <div class="profile-section">
+                <h2>Identity Development</h2>
+                <div id="identityContent">
+                    <p>The student's journey of identity construction and negotiation...</p>
+                    <div class="highlight-box">
+                        <p id="identityHighlight">"[Key quote about identity development]"</p>
+                    </div>
+                    <p id="identityDetails">[Detailed response about how identity has evolved, the concept of 'enoughness', and navigating multiple chronotopes]</p>
+                </div>
+            </div>
+
+            <!-- Misunderstood Things -->
+            <div class="profile-section">
+                <h2>Misunderstood Things</h2>
+                <div id="misunderstoodContent">
+                    <p>What surprised the student and what misconceptions were corrected...</p>
+                    <div class="highlight-box">
+                        <p id="misunderstoodHighlight">"[Key quote about misconceptions]"</p>
+                    </div>
+                    <p id="misunderstoodDetails">[Detailed response about initial expectations vs. reality, surprises, and common misconceptions that were addressed]</p>
+                </div>
+            </div>
+
+            <!-- First Month Experience -->
+            <div class="profile-section">
+                <h2>First Month Experience</h2>
+                <div id="firstMonthContent">
+                    <p>The student's transition and adaptation during their first month...</p>
+                    <p id="firstMonthSurprises"><strong>Surprises:</strong> [What surprised them based on expectations]</p>
+                    <p id="firstMonthBehavior"><strong>Behavioral Shifts:</strong> [How they adjusted their behavior based on experiences]</p>
+                </div>
+            </div>
+
+            <!-- Education City vs Qatar -->
+            <div class="profile-section">
+                <h2>Education City vs. Qatar</h2>
+                <div id="ecVsQatarContent">
+                    <p>How the student navigates between the Education City space and broader Qatar...</p>
+                    <p id="ecVsQatarBehavior"><strong>Behavioral Shifts:</strong> [How behavior, dress codes, and language differ between spaces]</p>
+                    <p id="ecVsQatarDetails">[Detailed response about the distinction between these two chronotopes and how identity is negotiated differently in each]</p>
+                </div>
+            </div>
+
+            <!-- Reactions -->
+            <div class="profile-section">
+                <h2>Reactions to Accepting the Offer</h2>
+                <div id="reactionsContent">
+                    <p>How people close to the student reacted when they accepted the offer...</p>
+                    <p id="reactionsDetails">[Response about family and friends' reactions, pros and cons discussed, and initial concerns]</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html#students" class="back-button">← Back to Students</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Beyond the Rumors</h3>
+                    <p>First-hand voices replacing second-hand stories</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Topics</h4>
+                    <ul>
+                        <li><a href="index.html#topics">Infrastructure</a></li>
+                        <li><a href="index.html#topics">Culture</a></li>
+                        <li><a href="index.html#topics">Language</a></li>
+                        <li><a href="index.html#topics">Religion</a></li>
+                        <li><a href="index.html#topics">Identity Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <p>A project by Hussain Bin Usman and Yusuf Fares</p>
+                    <p>Exploring identity construction in Education City, Qatar</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Beyond the Rumors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Student data structure (this would typically come from a database or JSON file)
+        const studentsData = {
+            student1: {
+                name: "Student Name",
+                initials: "SN",
+                university: "CMU-Q",
+                origin: "Country Name",
+                currentLocation: "Qatar",
+                languages: "English, Arabic, [Others]",
+                religion: "[Religion or 'Prefer not to answer']",
+                phone: "+974 XXXX XXXX",
+                email: "student@example.com",
+                demographics: {
+                    name: "Student Name",
+                    currentLocation: "Qatar",
+                    originalHome: "Country Name",
+                    languagesSpoken: "English, Arabic, [Others]",
+                    religion: "[Religion or 'Prefer not to answer']"
+                },
+                priorKnowledge: {
+                    opportunities: "[Response about knowledge of opportunities]",
+                    educationCity: "[Response about awareness of Education City]",
+                    diploma: "[Response about diploma equivalence]",
+                    sharia: "[Response about opinion on Sharia law countries]"
+                },
+                infrastructure: {
+                    highlight: "Education City's infrastructure provides spaces where I can express different aspects of my identity seamlessly.",
+                    details: "[Detailed response about infrastructure experience]"
+                },
+                culture: {
+                    highlight: "Cultural identity here is about negotiation, not assimilation. I've learned to calibrate my behavior across different contexts.",
+                    details: "[Detailed response about cultural experience]"
+                },
+                language: {
+                    highlight: "I switch between English and Arabic naturally. It's not about choosing one—it's about using all languages to express who I am.",
+                    details: "[Detailed response about language and translanguaging]"
+                },
+                religion: {
+                    highlight: "Religious expression is respected here. I found space to practice my beliefs while engaging with diverse perspectives.",
+                    details: "[Detailed response about religious experience]"
+                },
+                identity: {
+                    highlight: "Identity development is ongoing. I continuously negotiate my sense of self across multiple contexts.",
+                    details: "[Detailed response about identity development]"
+                },
+                misunderstood: {
+                    highlight: "The reality is so different from what I expected. Many of my initial concerns were unfounded.",
+                    details: "[Detailed response about misconceptions]"
+                },
+                firstMonth: {
+                    surprises: "[What surprised them based on expectations]",
+                    behavior: "[How they adjusted their behavior]"
+                },
+                ecVsQatar: {
+                    behavior: "[How behavior differs between spaces]",
+                    details: "[Detailed response about the distinction]"
+                },
+                reactions: {
+                    details: "[Response about family and friends' reactions]"
+                }
+            }
+            // Add more student data here as needed
+        };
+
+        // Get student ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const studentId = urlParams.get('id') || 'student1';
+        const student = studentsData[studentId] || studentsData.student1;
+
+        // Populate profile page
+        function populateProfile() {
+            // Hero section
+            document.getElementById('profileAvatar').textContent = student.initials || student.name.split(' ').map(n => n[0]).join('');
+            document.getElementById('profileName').textContent = student.name;
+            document.getElementById('profileUniversity').textContent = student.university;
+            document.getElementById('profileOrigin').textContent = `From: ${student.origin}`;
+            document.getElementById('profileLanguages').textContent = `Languages: ${student.languages}`;
+            document.getElementById('profilePhone').textContent = student.phone;
+            document.getElementById('profilePhone').href = `tel:${student.phone.replace(/\s/g, '')}`;
+            document.getElementById('profileEmail').textContent = student.email;
+            document.getElementById('profileEmail').href = `mailto:${student.email}`;
+
+            // Demographics
+            document.getElementById('studentName').textContent = student.demographics.name;
+            document.getElementById('currentLocation').textContent = student.demographics.currentLocation;
+            document.getElementById('originalHome').textContent = student.demographics.originalHome;
+            document.getElementById('languagesSpoken').textContent = student.demographics.languagesSpoken;
+            document.getElementById('religion').textContent = student.demographics.religion;
+
+            // Prior Knowledge
+            document.getElementById('knowledgeOpportunities').textContent = `Knowledge about opportunities: ${student.priorKnowledge.opportunities}`;
+            document.getElementById('knowledgeEC').textContent = `Awareness of Education City: ${student.priorKnowledge.educationCity}`;
+            document.getElementById('knowledgeDiploma').textContent = `Understanding of diploma equivalence: ${student.priorKnowledge.diploma}`;
+            document.getElementById('knowledgeSharia').textContent = `Opinion about Sharia law countries: ${student.priorKnowledge.sharia}`;
+
+            // Topics
+            document.getElementById('infrastructureHighlight').textContent = student.infrastructure.highlight;
+            document.getElementById('infrastructureDetails').textContent = student.infrastructure.details;
+            
+            document.getElementById('cultureHighlight').textContent = student.culture.highlight;
+            document.getElementById('cultureDetails').textContent = student.culture.details;
+            
+            document.getElementById('languageHighlight').textContent = student.language.highlight;
+            document.getElementById('languageDetails').textContent = student.language.details;
+            
+            document.getElementById('religionHighlight').textContent = student.religion.highlight;
+            document.getElementById('religionDetails').textContent = student.religion.details;
+            
+            document.getElementById('identityHighlight').textContent = student.identity.highlight;
+            document.getElementById('identityDetails').textContent = student.identity.details;
+            
+            document.getElementById('misunderstoodHighlight').textContent = student.misunderstood.highlight;
+            document.getElementById('misunderstoodDetails').textContent = student.misunderstood.details;
+
+            // First Month
+            document.getElementById('firstMonthSurprises').innerHTML = `<strong>Surprises:</strong> ${student.firstMonth.surprises}`;
+            document.getElementById('firstMonthBehavior').innerHTML = `<strong>Behavioral Shifts:</strong> ${student.firstMonth.behavior}`;
+
+            // EC vs Qatar
+            document.getElementById('ecVsQatarBehavior').innerHTML = `<strong>Behavioral Shifts:</strong> ${student.ecVsQatar.behavior}`;
+            document.getElementById('ecVsQatarDetails').textContent = student.ecVsQatar.details;
+
+            // Reactions
+            document.getElementById('reactionsDetails').textContent = student.reactions.details;
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', populateProfile);
+    </script>
+</body>
+</html>
+

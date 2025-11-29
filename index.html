@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the Rumors - Identity in Education City, Qatar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Beyond the Rumors</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="#students">Students</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Beyond the Rumors</h1>
+            <p class="hero-subtitle">Discover the Real Stories of Identity Construction in Education City, Qatar</p>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        class="hero-video">
+                    </iframe>
+                </div>
+            </div>
+            <p class="hero-description">
+                First-hand voices replacing second-hand stories. Real experiences from students navigating identity, 
+                language, and belonging in the Gulf's most dynamic educational ecosystem.
+            </p>
+        </div>
+    </section>
+
+    <!-- Student Testimonials Carousel -->
+    <section id="stories" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Student Voices</h2>
+            <p class="section-subtitle">Real experiences from Education City students</p>
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Carousel items will be added dynamically -->
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">
+                                The transition wasn't about proving my 'enoughness'—it was about finding enough room to adjust. 
+                                The flexible community here became my lubricant for growth.
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"></div>
+                                <div class="author-info">
+                                    <h4>Student Name</h4>
+                                    <p>CMU-Q Student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">
+                                I switch between English and Arabic seamlessly here. In class, I'm 'professional enough' 
+                                with polished presentations. With friends, I'm 'local enough' using my first language for care and humor.
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"></div>
+                                <div class="author-info">
+                                    <h4>Student Name</h4>
+                                    <p>Education City Student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">
+                                Identity work here isn't an occasional crisis—it's a routine choreography. I negotiate who I am 
+                                in classrooms, corridors, prayer rooms, and living rooms every single day.
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"></div>
+                                <div class="author-info">
+                                    <h4>Student Name</h4>
+                                    <p>Education City Student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" id="prevBtn">‹</button>
+                <button class="carousel-btn next" id="nextBtn">›</button>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Identity Topics Section -->
+    <section id="topics" class="topics-section">
+        <div class="container">
+            <h2 class="section-title">Exploring Identity in Qatar</h2>
+            <p class="section-subtitle">Navigate through the multifaceted aspects of identity construction in Education City</p>
+            
+            <div class="tabs-container">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="infrastructure">Infrastructure</button>
+                    <button class="tab-btn" data-tab="culture">Culture</button>
+                    <button class="tab-btn" data-tab="language">Language</button>
+                    <button class="tab-btn" data-tab="religion">Opinions about Religion</button>
+                    <button class="tab-btn" data-tab="development">Identity Development</button>
+                    <button class="tab-btn" data-tab="misunderstood">Misunderstood Things</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <div class="tab-panel active" id="infrastructure">
+                        <div class="topic-content">
+                            <h3>Infrastructure</h3>
+                            <p>
+                                Education City represents a unique convergence of world-class infrastructure and cultural integration. 
+                                Students navigate between state-of-the-art facilities, modern transportation systems, and spaces 
+                                designed to accommodate diverse needs—from prayer rooms to collaborative study areas.
+                            </p>
+                            <p>
+                                The physical environment shapes identity construction, providing spaces where students can express 
+                                different aspects of themselves. The tram connecting universities, the shared library, and the 
+                                inter-university competitions create a chronotope where global and local identities intersect daily.
+                            </p>
+                            <div class="topic-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">9</span>
+                                    <span class="stat-label">Universities</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">1</span>
+                                    <span class="stat-label">Education City</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">∞</span>
+                                    <span class="stat-label">Possibilities</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="culture">
+                        <div class="topic-content">
+                            <h3>Culture</h3>
+                            <p>
+                                The cultural landscape of Education City is a dynamic blend of global perspectives and local traditions. 
+                                Students experience a micro-hegemony that reflects the broader Qatari context while maintaining 
+                                international academic standards.
+                            </p>
+                            <p>
+                                Cultural identity here is not about assimilation but about negotiation. Students learn to calibrate 
+                                their behavior, dress codes, and social interactions across different contexts—from formal academic 
+                                settings to casual campus life, from international events to local community gatherings.
+                            </p>
+                            <ul class="topic-list">
+                                <li>Diversity and inclusivity for all backgrounds</li>
+                                <li>Freedom of expression within respectful boundaries</li>
+                                <li>Integration of local and global cultural practices</li>
+                                <li>Community recognition of authentic identity expressions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="language">
+                        <div class="topic-content">
+                            <h3>Language</h3>
+                            <p>
+                                Translanguaging is a daily reality in Education City. Students seamlessly switch between English, 
+                                Arabic, and their first languages, creating a linguistic ecosystem that reflects their complex identities.
+                            </p>
+                            <p>
+                                Language choices are identity work. A student might deliver a polished English presentation in class, 
+                                switch to Arabic for emotional support with friends, and code-mix when explaining technical concepts 
+                                to family members. These choices are not random—they are strategic identity performances.
+                            </p>
+                            <div class="language-example">
+                                <blockquote>
+                                    "We study on the library stairs, laughing about how we switch between English and Arabic. 
+                                    It's not about choosing one language—it's about using all of them to express who we are."
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="religion">
+                        <div class="topic-content">
+                            <h3>Opinions about Religion</h3>
+                            <p>
+                                Religious identity in Education City is respected and accommodated. Prayer rooms are available, 
+                                religious observances are recognized, and students from all faith backgrounds find space to practice 
+                                their beliefs while engaging with diverse perspectives.
+                            </p>
+                            <p>
+                                The initial concerns many families have about religious expression in a country with Sharia law are 
+                                often replaced by understanding when students experience the reality: a space where faith is respected, 
+                                where religious diversity is celebrated, and where personal beliefs can coexist with academic rigor.
+                            </p>
+                            <div class="religion-points">
+                                <div class="point-card">
+                                    <h4>Respectful Accommodation</h4>
+                                    <p>Prayer rooms and religious facilities available across campus</p>
+                                </div>
+                                <div class="point-card">
+                                    <h4>Diverse Perspectives</h4>
+                                    <p>Students from various faith backgrounds share their experiences</p>
+                                </div>
+                                <div class="point-card">
+                                    <h4>Open Dialogue</h4>
+                                    <p>Conversations about religion happen naturally and respectfully</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="development">
+                        <div class="topic-content">
+                            <h3>Identity Development</h3>
+                            <p>
+                                Identity development in Education City is not a one-time event but an ongoing process. Students 
+                                continuously negotiate their sense of self across multiple chronotopes—academic, social, cultural, 
+                                and personal.
+                            </p>
+                            <p>
+                                The concept of "enoughness" is central. Students learn that being "professional enough" in one context 
+                                doesn't require abandoning being "local enough" in another. This calibration becomes a skill, a form 
+                                of identity literacy that serves them beyond graduation.
+                            </p>
+                            <div class="development-timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>Arrival</h4>
+                                        <p>Initial expectations meet reality</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>First Month</h4>
+                                        <p>Behavioral shifts and adaptation</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>Ongoing</h4>
+                                        <p>Continuous identity negotiation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="misunderstood">
+                        <div class="topic-content">
+                            <h3>Misunderstood Things</h3>
+                            <p>
+                                Many misconceptions about studying in Qatar persist. Families imagine restrictions, limitations, 
+                                and cultural clashes that don't match the reality students experience. This section addresses 
+                                the most common concerns with honest, first-hand accounts.
+                            </p>
+                            <div class="misconceptions-grid">
+                                <div class="misconception-card">
+                                    <h4>❌ Misconception</h4>
+                                    <p>"You can't express yourself freely"</p>
+                                    <h4>✅ Reality</h4>
+                                    <p>Students find ample space for self-expression within respectful boundaries. Diversity is celebrated, not suppressed.</p>
+                                </div>
+                                <div class="misconception-card">
+                                    <h4>❌ Misconception</h4>
+                                    <p>"You have to abandon your culture"</p>
+                                    <h4>✅ Reality</h4>
+                                    <p>Cultural identity is negotiated, not replaced. Students integrate their backgrounds with new experiences.</p>
+                                </div>
+                                <div class="misconception-card">
+                                    <h4>❌ Misconception</h4>
+                                    <p>"The diploma is different from the main campus"</p>
+                                    <h4>✅ Reality</h4>
+                                    <p>Students receive the exact same diploma as the main campus, with identical academic rigor and recognition.</p>
+                                </div>
+                                <div class="misconception-card">
+                                    <h4>❌ Misconception</h4>
+                                    <p>"Life is restrictive and limited"</p>
+                                    <h4>✅ Reality</h4>
+                                    <p>Education City offers a vibrant, dynamic environment with opportunities for growth, connection, and exploration.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Students Section -->
+    <section id="students" class="students-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Students</h2>
+            <p class="section-subtitle">Connect with students who share their authentic experiences</p>
+            <div class="students-grid" id="studentsGrid">
+                <!-- Student cards will be added dynamically -->
+                <div class="student-card" data-student="student1">
+                    <div class="student-avatar"></div>
+                    <h3>Student Name</h3>
+                    <p class="student-university">CMU-Q</p>
+                    <p class="student-origin">From: [Country]</p>
+                    <a href="student-profile.html?id=student1" class="view-profile-btn">View Profile</a>
+                </div>
+                <!-- More student cards can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Beyond the Rumors</h3>
+                    <p>First-hand voices replacing second-hand stories</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Topics</h4>
+                    <ul>
+                        <li><a href="#topics">Infrastructure</a></li>
+                        <li><a href="#topics">Culture</a></li>
+                        <li><a href="#topics">Language</a></li>
+                        <li><a href="#topics">Religion</a></li>
+                        <li><a href="#topics">Identity Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <p>A project by Hussain Bin Usman and Yusuf Fares</p>
+                    <p>Exploring identity construction in Education City, Qatar</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Beyond the Rumors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
